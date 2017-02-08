@@ -1,0 +1,135 @@
+<div ng-controller="homePage">
+		<!--轮播图-->
+		<div class="swiper-container" style="height: 550px;">
+			<div class="swiper-wrapper">
+				<a href=""  class="swiper-slide" ng-repeat="p in sliderSrcArr" style="background: url({{p}});background-position: center top" ></a>
+			</div>
+			<div class="pagination" id="imagePoint"></div>
+		</div>
+		<!--商品分类-->
+		<div id="shopType" class="clear">
+			<div id="typeLeft" class="clear">
+				<h4>商品分类</h4>
+				<hr style="border-color: #DEDEDE;border-style: dashed;"/>
+				<ul id="typeLeft_list">
+					<li class="typeLeft_list_li">
+						<ul class="typeLeft_list1">
+							<li>
+								<span><a href="" class="letf_show">绿茶</a></span>
+								<span><a href="">信阳毛尖</a></span>
+								<span><a href="">安吉白茶</a></span>
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+							<li>
+								<span><a href="" class="letf_show">黑茶</a></span>
+								<span><a href="">湖南黑茶</a></span>
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+							<li>
+								<span><a href="" class="letf_show">白茶</a></span>
+								<span><a href="">白毫银针</a></span>
+								<span><a href="">白牡丹</a></span>
+								<span><a href="">寿眉</a></span>
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+							<li>
+								<span><a href="" class="letf_show">红茶</a></span>
+								<span><a href="">金骏眉</a></span>
+								<span><a href="">正山小种</a></span>
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+						</ul>
+					</li>
+					<li class="typeLeft_list_li">
+						<ul class="typeLeft_list1">
+							<li>
+								<span><a href="" class="letf_show">乌龙茶</a></span>
+								<span><a href="">安溪铁观音</a></span>
+								<span><a href="">武夷大红袍</a></span>
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+							<li>
+								<span><a href="" class="letf_show">普洱茶</a></span>
+								<span><a href="">普洱熟茶</a></span>
+								<span><a href="">普洱生茶</a></span>
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+							<li>
+								<span><a href="" class="letf_show" style="margin-right: 46px;">花茶</a></span>
+								<span><a href="">茉莉花茶</a></span>
+								
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+							<li>
+								<span><a href="" class="letf_show" style="margin-right: 46px;">茶具</a></span>
+								<span><a href="">茶具套装</a></span>
+								<span><a href="">茶杯</a></span>
+								<span><a href="">茶壶</a></span>
+							</li>
+							<hr  style="border-style: dashed;border-color: #DEDEDE;"/>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="typeRight">
+				<h4>好茶联盟品牌区</h4>
+				<!--展示-->
+				<ul id="typeRight_list">
+					<li><a href="" title="和茶趣"><img src="img/tea_type1.gif"/></a></li>
+					<li><a href="" title="御馨茗茶"><img src="img/tea_type2.gif"/></a></li>
+					<li><a href="" title="宋茗白茶"><img src="img/tea_type3.gif"/></a></li>
+					<li><a href="" title="方守龙"><img src="img/tea_type4.gif"/></a></li>
+					<li><a href="" title="岩悟"><img src="img/tea_type5.gif"/></a></li>
+					<li><a href="" title="勐库戎氏"><img src="img/tea_type6.gif"/></a></li>
+					<li><a href="" title="铁良老班章"><img src="img/tea_type7.gif"/></a></li>
+					<li><a href="" title="粒粒香"><img src="img/tea_type8.gif"/></a></li>
+					<li><a href="" title="泡泡茶"><img src="img/tea_type9.gif"/></a></li>
+					<li><a href="" title="元典茶圃"><img src="img/tea_type10.gif"/></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--热销推荐-->
+		<div id="recommend">
+			<div id="recommend_left">
+				<p>热销推荐 : <a href="">【茗淘惠】御馨茗茶 韵香型铁观音 铁盒装 75g</a></p>
+				<div id="recommend_left_show">
+					<a href=""><img src="img/zhanshi.jpg" alt="展示" /></a>
+				</div>
+				<div id="recommend_right_price">
+					<div id="show_price">
+						<span>¥98.0</span>
+						<span>¥98.0</span>
+					</div>
+					<div id="show_buy">
+						<a href=""></a>
+					</div>
+					<div class="on_show">已售出<span>0</span></div>
+					<div class="on_show">以评论<span>0</span></div>
+				</div>
+				
+			</div>
+			<div id="show_right">
+				
+			</div>
+		</div>
+		
+		<!--商品展示区-->
+		<div id="productShow">
+			<ul id="productShow_list">
+				<li ng-repeat="p in homeProduct">
+					<img src="img/{{p.imgsrc}}" alt="展示图" />
+					<a href="">{{p.description}}</a>
+					<div id="show_homeprice">
+						<span>{{p.homePrice|currency:"¥"}}</span>
+						<span>{{p.marketPrice|currency:"¥"}}</span>
+						<span><a href="">立即购买</a></span>
+					</div>
+					<div id="remark" class="clear">
+						<p class="remark_p">已购买<span>{{p.sold}}</span></p>
+						<p class="remark_p1">已评论<span>{{p.remark}}</span></p>
+					
+					</div>
+				</li>
+			</ul>
+		</div>
+</div>

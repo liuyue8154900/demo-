@@ -1,0 +1,46 @@
+#xinyang_head{width: 1100px;margin: 0 auto;height: 40px;}
+#xinyang_head p{color: #808080;line-height: 40px;font-size: 12px;}
+#xinyang_head p span a{color: #696969;}
+#xinyang_head p span a:hover{color: red;}
+p{margin: 0;}
+/*热销排行*/
+#hotProducts{width: 1100px;margin: 0 auto;}
+#history{width: 230px;}
+#hotProducts_left{width:230px;float: left;}
+#hotProducts_title,#history_title{width: 230px;}
+#hotProducts_title p,#history_title p{font-size: 12px;height: 30px;background: #F5F5F5;line-height: 30px;text-indent:1em;border: 1px solid #DEDEDE;margin: 0;border-bottom: none;}
+#hotProducts_list{width:230px;border: 1px solid #DEDEDE;padding-bottom: 10px;}
+#hotProducts_list li{width: 210px;margin: 0 auto;border-bottom: 1px solid #DEDEDE;padding:10px 0}
+#hotProducts_list li #hotProducts_img img {width: 60px;height: 60px;border: 1px solid #DEDEDE;}
+#hotProducts_img{float: left;padding-right: 10px;padding-bottom: 5px;}
+#hotProducts_list li #hotProducts_img img:hover{border-color: #D2691E;text-align: center;}
+#hotProducts_list li p a{display:block;font-size: 12px;color: #808080;line-height: 15px;}
+#hotProducts_list li p a:hover{color: red;}
+#p1{font-size: 12px;color: #808080;text-decoration: line-through;}
+#p2{font-size: 12px;color: red;}
+/*商品筛选*/
+#checkProduct{width: 850px;float: right;}
+#checkProduct_head{border: 1px solid #DEDEDE;padding-bottom: 10px;}
+#checkProduct_head p:nth-child(1){width: 100%;height: 30px;background: #F5F5F5;line-height: 30px;font-size: 12px;text-indent: 1em;margin-top: 0;}
+#checkProduct_head .checkProduct_p{width: 100%;height: 20px;line-height: 20px;font-size: 12px;text-indent: 1em;margin-top: 10px;}
+#checkProduct_head .checkProduct_p span{margin-left: 20px;cursor: pointer;padding: 3px 5px 3px 5px;}
+#checkProduct_head .checkProduct_p span:hover{background:#bf8c26;color: white;}
+#dataShow ul{float: left;width: 250px;margin: 0px 10px 10px;margin-left: 20px;padding-bottom: 10px;border: 1px solid white;}
+#dataShow ul:hover{border: 1px solid #bf8c26;}
+#dataShow ul #dataShow_img{border: 1px solid #DEDEDE;width: 225px;margin: 10px auto 5px;}
+#dataShow ul li img{width: 185px;height: 185px;display: block;margin-left: 20px;}
+#dataShow_title p{font-size: 12px;color: #808080;width: 225px;margin: 0 auto;padding-bottom: 5px;height: 40px;}
+#dataShow_title p a{color: #808080;}
+#dataShow_title p a:hover{color: red;}
+#dataShow_price,#addCar{width: 225px;margin: 0 auto;}
+#dataShow_price{padding-bottom: 20px;}
+#dataShow_price_marke{font-size: 12px;color: #808080;text-decoration: line-through;}
+#dataShow_price_home{font-size: 14px;color: red;font-weight: bolder;}
+#addCar_btn_left{width: 97px;height: 21px;background: url(../img/addcar.gif) no-repeat;text-align: right;float: left;}
+#addCar_btn_right{width: 97px;height: 21px;background: url(../img/addshou.gif) no-repeat;text-align: right;float: right;}
+#addCar_btn_left a,#addCar_btn_right a{font-size: 12px;color: #808080;margin-right: 6px;}
+#addCar_btn_left a:hover{color: red;}
+#addCar_btn_right a:hover{color: red;}
+.selected{background:#bf8c26;color: white;}
+
+.selected1{background:#bf8c26;color: white;}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="mainMVC">
+
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/xinyang.css	"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body >
+		<!--头部登录栏-->
+		<div id="nav_login">
+			<div id="nav_collection">
+				<a href="">收藏</a>
+				<span></span>
+				<span>欢迎光临茶居士网!</span>
+				<a href="" class="login">登录</a>
+				<span></span>
+				<a href="" class="login">免费注册</a>
+				<!--右侧部分-->
+				<div id="nav_collection_right">
+					<a href="">企业客户</a>
+					<span></span>
+					<a href="">关于茶居士</a>
+					<span></span>
+					<a href="">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--logo搜索部分-->
+		<div id="nav_logo">
+			<div class="pull-left">
+				<img src="img/logo.png" alt="茶居士" id="chaLogo" />
+			</div>
+					<div class="clear" id="sousuo">
+						<div class="input-group" id="search_1">
+						<input type="text" class="form-control" style="border-radius: 0;border: 1px solid #A0522D;border-right: none;font-size: 12px;"placeholder="亲,你想要点什么">
+						<span class="input-group-btn">
+        			<button class="btn btn-default" type="button" style="border: 1px solid #A0522D; border-left: none;border-radius: 0;outline: none;" ><span class="glyphicon glyphicon-search"></span></button>
+  		 			 </span>
+				</div>
+					<ul id="sousuo_list">
+						<li>热门搜索:</li>
+						<li ng-repeat=" p in products|unique:'catapoty'"><a>{{p.catapoty}}</a></li>
+					</ul>
+					</div>
+		
+				<div class="well well-sm pull-right" id="shopping" style="cursor: pointer;" >
+					<span id="alert">0</span>
+					<span class="iconfont icon-gouwuche2"></span>
+					<a href=""style="margin:0px 5px 0 5px">去购物车结算</a>
+					<span class="iconfont icon-icon36" style="color: gray; cursor: pointer;"></span>
+				</div>
+				
+				<div class="well well-sm pull-right" id="myOrder"  style="cursor: pointer;" >
+					<span class="iconfont icon-wode" ></span>
+					<a href="" style="margin:0px 5px 0 5px">我的订单</a>
+					<span class="iconfont icon-triangle-down-copy" style="color: gray;cursor: pointer;"></span>
+				</div>
+		</div>
+		<!--导航栏-->
+		<div id="head_nav">
+			<ul id="head_nav_list">
+				<li><a href="#/homepage" ng-click="changeAdd('首页')">首页</a></li>
+				<li ng-repeat=" p in products|unique:'catapoty'"><a ng-href="#/xinyang"  ng-click="changeAdd(p.catapoty)">{{p.catapoty}}</a></li>
+			</ul>
+		</div>
+		
+		<!--ng-view-->
+	<ng-view></ng-view>
+
+		
+		
+		
+		
+		
+		
+		<!--脚部-->
+		<div id="footer_show">
+			<ul>
+				<li>
+					<h2>满98元包邮</h2>
+					<p>货到付款除外</p>
+				</li>
+				<li>
+					<h2>正品保证</h2>
+					<p>全场正品 假一赔十</p>
+				</li>
+				<li>
+					<h2>15天退换货</h2>
+					<p>零风险 无忧网购</p>
+				</li>
+				<li>
+					<h2>原产地</h2>
+					<p>产地直供 质优价廉</p>
+				</li>
+			</ul>
+		</div>
+		<!--信息展示-->
+		<div id="footer_search">
+			<ul id="footer_search_list">
+				<li class="footer_li">
+					<ul class="footer_search_list1">
+						<li><a href="" style="color: white;">新手上路</a></li>
+						<li><a href="">注册及登录</a></li>
+						<li><a href="">密码忘记</a></li>
+						<li>	<a href="">常见问题</a></li>
+					</ul>
+				</li>
+				<li class="footer_li">
+					<ul class="footer_search_list1">
+						<li><a href="" style="color: white;">付款方式</a></li>
+						<li><a href="">货到付款</a></li>
+						<li><a href="">银行转账</a></li>
+						<li>	<a href="">在线支付</a></li>
+					</ul>
+				</li>
+				<li class="footer_li">
+					<ul class="footer_search_list1">
+						<li><a href="" style="color: white;">配送说明</a></li>
+						<li><a href="">运费说明</a></li>
+						<li><a href="">配送范围</a></li>
+						<li>	<a href="">配送方式</a></li>
+					</ul>
+				</li>
+				<li class="footer_li"> 
+					<ul class="footer_search_list1">
+						<li><a href="" style="color: white;">售后服务</a></li>
+						<li><a href="">服务承诺</a></li>
+						<li><a href="">换货流程</a></li>
+						<li>	<a href="">退货流程</a></li>
+					</ul>
+				</li>
+				<li class="footer_li">
+					<ul class="footer_search_list1">
+						<li><a href="" style="color: white;">相关知识</a></li>
+						<li><a href="">好茶联盟</a></li>
+						<li><a href="">茶叶百科</a></li>
+						<li>	<a href="">茶具百科</a></li>
+					</ul>
+				</li>
+				<li class="footer_li">
+					<ul class="footer_search_list1">
+						<li><a href="" style="color: white;">客服电话: <span style="color: #FFE4B5;">4000-788-367</span></a></li>
+						<li><a href="">在线客服&nbsp;&nbsp;&nbsp;<img src="img/button_111.gif" alt="点击我联系我" /></a></li>
+						<li style="margin-top: 20px;"><a href="">官方微信&nbsp;&nbsp;<img src="img/1484381965.png" alt="二维码" style="width: 60px;height: 60px;margin-top: -10px;"/></a></li>
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--友情链接-->
+		<div id="friendUrl">
+			<div id="footer_url">
+			<span><a href="" style="text-decoration: none;">[友情链接]</a></span>
+			<span><a href="">茶叶商城</a></span>
+			<span class="url_line"></span>
+			<span><a href="">黑枸杞</a></span>
+			<span class="url_line"></span>
+			<span><a href="">雪菊</a></span>
+			<span class="url_line"></span>
+			<span><a href="">台湾高山茶</a></span>
+			<span class="url_line"></span>
+			<span><a href="">中国母婴网</a></span>
+			<span class="url_line"></span>
+			<span><a href="">西安美食网</a></span>
+			<span class="url_line"></span>
+			<span><a href="">崂山绿茶</a></span>
+			<span class="url_line"></span>
+			<span><a href="">进口食品批发</a></span>
+			<span class="url_line"></span>
+			<span><a href="">生鲜食材</a></span>
+			<br />
+			<span><a href="">关于茶居士网站</a></span>
+			<span class="url_line"></span>
+			<span><a href="">企业客户</a></span>
+			<span class="url_line"></span>
+			<span><a href="">品牌合作</a></span>
+			<span class="url_line"></span>
+			<span><a href="">人才招聘</a></span>
+			<span class="url_line"></span>
+			<span><a href="">隐私保护</a></span>
+			<span class="url_line"></span>
+			<span><a href="">站点地图</a></span>
+			<span class="url_line"></span>
+			<span><a href="">联系方式</a></span>
+			<br />
+			<span class="footer_url2">© 2005-2017 茶居士网 版权所有，并保留所有权利。</span>
+			<span class="footer_url2">ICP备案证书号: <a style="cursor: pointer;">豫ICP备13002238号</a></span>
+			<span ><a href="http://tongji.baidu.com/web/welcome/ico?s=b91deade75afa1bc9f2b27061be7e19a">百度统计</a></span>
+			<span class="footer_url2">E-mail: 38236942@qq.com</span>
+			</div>
+			<div id="beian">
+				<img src="img/foot_img1.png" alt="可信任网站" />
+				<img src="img/foot_img2.png" alt="备案信息" />
+				<img src="img/foot_img3.jpg" alt="支付宝" />
+				<img src="img/foot_img4.png" alt="中国银联" />
+				<img src="img/foot_img5.png" alt="财付通" />
+				<img src="img/foot_img6.png" alt="360" />
+			</div>
+		</div>
+	</body>
+
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/customFilter.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/homepage.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/xinyang.js" type="text/javascript" charset="utf-8"></script>

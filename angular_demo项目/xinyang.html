@@ -1,0 +1,107 @@
+<div ng-controller="xinyangMVC" class="clear">
+	<!--头部标签-->
+	<div id="xinyang_head">
+		<p>当前位置: <span><a href="#/homepage">首页</a> > <a href="#/xinyang">{{type}}</a></span></p>
+	</div>
+	<hr  style="width: 1100px;margin-left: 245px;margin-top: 0;"/>
+	
+	<!--热销商品-->
+	<div id="hotProducts" class="clear">
+		<div id="hotProducts_left">
+			<div id="hotProducts_title">
+			<p>热销排行</p>
+		</div>
+		<ul id="hotProducts_list">
+			<li ng-repeat="p in hotProduct" class="clear">
+				<div id="hotProducts_img">
+					<a href=""><img ng-src='img/{{p.imgsrc}}' alt='{{p.brand}}'/></a>
+				</div>
+				<p><a href="">{{p.description}}</a></p>
+				<p id="p1">市场价: {{p.marketPrice|currency:"¥"}}</p>
+				<p id="p2">本店价: {{p.homePrice|currency:"¥"}}</p>
+			</li>
+		</ul>
+		<!--浏览历史-->
+	<div id="history" class="clear">
+		<div id="history_title">
+			<p>浏览历史</p>
+		</div>
+		<ul id="hotProducts_list">
+			<li ng-repeat="p in hotProduct" class="clear">
+				<div id="hotProducts_img">
+					<a href=""><img ng-src='img/{{p.imgsrc}}' alt='{{p.brand}}'/></a>
+				</div>
+				<p><a href="">{{p.description}}</a></p>
+				<p id="p1">市场价: {{p.marketPrice|currency:"¥"}}</p>
+				<p id="p2">本店价: {{p.homePrice|currency:"¥"}}</p>
+			</li>
+		</ul>
+	</div>
+	</div>
+	
+	
+	<!--商品筛选-->
+	<div id="checkProduct" class="clear">
+		<div id="checkProduct_head">
+			<p class="checkProduct_p">{{type}}-商品筛选</p>
+			<p class="checkProduct_p">品牌:
+				<span ng-click="chooseClick('brand','1')" class="choose_quan">全部</span>
+				<span ng-repeat="p in chooseProduct|unique:'brand'" ng-click="chooseClick('brand',p.brand)" ng-class="{selected:chooseName==p.brand}">{{p.brand}}</span>
+				<hr style="margin: 5px 10px; border-style: dashed;"/>
+			</p>
+			<p class="checkProduct_p">外观:
+				<span ng-click="chooseClick('facade','2')" class="choose_quan"}">全部</span>
+				<span ng-repeat="p in chooseProduct|unique:'facade'" ng-click="chooseClick('facade',p.facade)" ng-class="{selected:chooseName1==p.facade}">{{p.facade}}</span>
+				<hr style="margin: 5px 10px; border-style: dashed;"/>
+			</p>
+			<p class="checkProduct_p">等级:
+				<span ng-click="chooseClick('rank','3')" class="choose_quan"}">全部</span>
+				<span ng-repeat="p in chooseProduct|unique:'rank'" ng-click="chooseClick('rank',p.rank)" ng-class="{selected:chooseName2==p.rank}">{{p.rank}}</span>
+				<hr style="margin: 5px 10px; border-style: dashed;"/>
+			</p>
+			<p class="checkProduct_p">净含:
+				<span ng-click="chooseClick('colgateArr','4')" class="choose_quan"}">全部</span>
+				<span ng-repeat="p in chooseProduct|unique:'colgateArr'"  ng-click="chooseClick('colgateArr',p.colgateArr)" ng-class="{selected:chooseName3==p.colgateArr}">{{p.colgateArr}}</span>
+				<hr style="margin: 5px 10px; border-style: dashed;"/>
+			</p>
+			<p class="checkProduct_p">价格:
+				<span ng-click="chooseClick('priceArr','5')" class="choose_quan"}">全部</span>
+				<span ng-repeat="p in chooseProduct|unique:'priceArr'" ng-click="chooseClick('priceArr',p.priceArr)" ng-class="{selected:chooseName4==p.priceArr}">{{p.priceArr}}</span>
+				<hr style="margin: 5px 10px; border-style: dashed;"/>
+			</p>
+		</div>
+		<!--信息展示部分-->
+		<div id="dataShow" class="clear">
+			<ul ng-repeat=" p in hotArr">
+				<li id="dataShow_img">
+					<a href=""><img ng-src='img/{{p.imgsrc}}' alt="" /></a>
+				</li>
+				<li id="dataShow_title">
+					<p><a href="">{{p.description}}</a></p>
+				</li>
+				<li id="dataShow_price">
+					<p id="dataShow_price_marke">市场价: {{p.marketPrice|currency:'¥'}}</p>
+					<p id="dataShow_price_home">本站价: {{p.homePrice|currency:"¥"}}</p>
+				</li>
+				<li id="addCar">
+					<div id="addCar_btn_left"><a href="">加入购物车</a></div>
+					<div id="addCar_btn_right"><a href="">加入收藏夹</a></div>
+				</li>
+			</ul>
+		</div>
+				<!--分页-->
+					<nav style="float: right;">			
+						  <ul class="pagination pagination-sm">
+						    <li><a href=""  ng-click="productClass(number1-1)">上一页</a></li>
+						    <li ng-repeat=" p in numArr" ng-click="productClass(p)" ><a href="" class="libtn">{{p}}</a></li>
+						    <li><a href="" ng-click="productClass(number1+1)">下一页</a></li>
+						  </ul>
+						</nav>
+			</div>
+	
+	
+		
+		</div>
+
+	
+</div>

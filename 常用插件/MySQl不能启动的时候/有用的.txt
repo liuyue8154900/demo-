@@ -1,0 +1,9 @@
+sudo /usr/sbin/apachectl stop  关闭自带的服务器
+
+
+sudo rm /Applications/XAMPP/xamppfiles/bin/mysql.server  
+  
+sudo ln -s /Applications/XAMPP/xamppfiles/share/mysql/mysql.server /Applications/XAMPP/xamppfiles/bin/mysql.server 
+
+
+sudo /Applications/XAMPP/xamppfiles/bin/mysql.server start  // 重新启动数据库
